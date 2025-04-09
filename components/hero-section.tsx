@@ -10,7 +10,7 @@ import { Button } from "./ui/button"
 
 export function HeroSection() {
   return (
-    <section id="home" className="w-vd h-[calc(100dvh-64px)] relative px-2">
+    <section id="home" className="w-dvw h-[calc(100dvh-64px)] relative px-2">
       <div className="h-full flex items-center justify-center gap-12 md:gap-32">
         <div className="display flex flex-col justify-center gap-6 min-w-5">
           <a className="inline-block" href="https://www.linkedin.com/in/diogo-soares-peixoto/" target="_blank">
