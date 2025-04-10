@@ -38,13 +38,13 @@ export function ExperienceSection() {
             {
               experiences.map((experience, index) => (
                 index  % 2 === 0 ? (
-                  <li className="grid grid-cols-3">
+                  <li className="grid grid-cols-[1fr_80px_1fr] sm:grid-cols-3">
                     <div className="flex flex-col gap-4">
-                      <p className="text-[#333333]">{experience.title}</p>
-                      <p className="text-sm text-[#757575]">{experience.company}</p>
+                      <p className="text-[#333333] text-sm sm:text-base">{experience.title}</p>
+                      <p className="text-xs sm:text-sm text-[#757575]">{experience.company}</p>
                       <div className="flex items-center gap-1">
                         <Image src={Calender} alt="date" />
-                        <p className="text-sm text-[#757575]">{experience.date}</p>
+                        <p className="text-xs sm:text-sm text-[#757575]">{experience.date}</p>
                       </div>
                     </div>
                     <div className="flex flex-col items-center" >
@@ -53,18 +53,18 @@ export function ExperienceSection() {
                     </div>
                   </li>
                 ):(
-                  <li className="grid grid-cols-3">
+                  <li className="grid grid-cols-[1fr_80px_1fr] sm:grid-cols-3">
                     <div />
                     <div className="flex flex-col items-center" >
                       <div className="w-3 h-3 rounded-full bg-[#757575]" />
                       <div className="h-full w-[1px] bg-[#757575]" />
                     </div>
                     <div className="flex flex-col gap-4">
-                      <p className="text-[#333333]">{experience.title}</p>
-                      <p className="text-sm text-[#757575]">{experience.company}</p>
+                      <p className="text-[#333333] text-sm sm:text-base">{experience.title}</p>
+                      <p className="text-xs sm:text-sm text-[#757575]">{experience.company}</p>
                       <div className="flex items-center gap-1">
                         <Image src={Calender} alt="date" />
-                        <p className="text-sm text-[#757575]">{experience.date}</p>
+                        <p className="text-xs sm:text-sm text-[#757575]">{experience.date}</p>
                       </div>
                     </div>
                   </li>
