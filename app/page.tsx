@@ -6,6 +6,7 @@ import { ServicesSection } from "@/components/services-section"
 import { SkillsSection } from "@/components/skills-section"
 import { AboutSection } from "@/components/about-section"
 import { Header } from "@/components/header"
+import { ExperienceSection } from "@/components/experience-section"
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
+        <ExperienceSection />
         <SkillsSection />
         <ServicesSection />
         <ContactForm />
