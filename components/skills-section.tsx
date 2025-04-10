@@ -1,6 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Database, Layout, Server, Settings } from "lucide-react"
+import { HeaderSection } from "./header-section"
+import Check from "@/assets/check-icon.svg"
+import Image from "next/image"
 
 export function SkillsSection() {
   const skillCategories = [
@@ -9,12 +12,12 @@ export function SkillsSection() {
       name: "Frontend",
       icon: <Layout className="h-5 w-5" />,
       skills: [
-        { name: "HTML/CSS", proficiency: 90 },
-        { name: "JavaScript", proficiency: 85 },
-        { name: "React", proficiency: 80 },
-        { name: "Next.js", proficiency: 75 },
-        { name: "TypeScript", proficiency: 70 },
-        { name: "Tailwind CSS", proficiency: 85 },
+        { name: "React" },
+        { name: "Tailwind" },
+        { name: "JavaScript" },
+        { name: "Next.js" },
+        { name: "Css" },
+        { name: "Tailwind" },
       ],
     },
     {
@@ -58,22 +61,17 @@ export function SkillsSection() {
 
   return (
     <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
-      <div className="container px-4 md:px-6">
+      <div className="px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">My Skills</h2>
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Technologies and tools I work with to bring ideas to life
-            </p>
-          </div>
+          <HeaderSection title="My Skills" subtitle="Technologies and tools I work with to bring ideas to life" />
         </div>
-        <div className="mx-auto max-w-4xl py-12">
-          <Tabs defaultValue="frontend" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4">
+        <div className="mx-auto max-w-4xl py-12 ">
+          <Tabs defaultValue="frontend" className="w-full flex flex-col gap-8 md:gap-0">
+            <TabsList className="grid w-full h-auto grid-cols-2 md:grid-cols-4">
               {skillCategories.map((category) => (
                 <TabsTrigger key={category.id} value={category.id} className="flex items-center gap-2">
                   {category.icon}
-                  <span className="hidden sm:inline">{category.name}</span>
+                  <span className="min-w-[70px] sm:inline">{category.name}</span>
                 </TabsTrigger>
               ))}
             </TabsList>
@@ -84,12 +82,9 @@ export function SkillsSection() {
                     <div className="grid gap-6 sm:grid-cols-2">
                       {category.skills.map((skill, index) => (
                         <div key={index} className="space-y-2">
-                          <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <Image src={Check} alt="check" />
                             <span className="font-medium">{skill.name}</span>
-                            <span className="text-sm text-muted-foreground">{skill.proficiency}%</span>
-                          </div>
-                          <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
-                            <div className="h-full bg-primary" style={{ width: `${skill.proficiency}%` }}></div>
                           </div>
                         </div>
                       ))}
