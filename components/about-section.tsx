@@ -2,16 +2,12 @@ import Image from "next/image"
 import DiogoIlustration from "@/assets/diogo-ilustration.png"
 import Medal from "@/assets/medal-icon.svg"
 import  Briefcase from "@/assets/briefcase-icon.svg"
+import { HeaderSection } from "./header-section"
 
 export function AboutSection() {
   return (
     <section id="about" className="w-full py-48 bg-muted/50 flex flex-col gap-16 px-4">
-      <div className="text-center">
-        <h2 className="font-semibold text-4xl">About Me</h2>
-        <p className="text-sm text-[#757575]">
-          Introduction
-        </p>
-      </div>
+      <HeaderSection title="About Me" subtitle="Introduction" />
 
       <div className="flex items-center justify-center flex-col sm:flex-row gap-9 md:gap-16">
         <Image src={DiogoIlustration} alt="develop Diogo" className="w-[250px] h-[234px] lg:h-auto lg:w-auto" />
