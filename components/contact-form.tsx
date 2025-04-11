@@ -8,7 +8,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { HeaderSection } from "./header-section"
+import Image from "next/image"
+import Email from "@/assets/email-icon.svg"
+import Whats from "@/assets/whats-icon.svg"
+import Linkedin from "@/assets/linkedin-icon.svg"
+import Arrow from "@/assets/arrow-right.svg"
+import ArrowSend from "@/assets/arrow-icon.svg"
+import Link from "next/link"
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -41,116 +48,107 @@ export function ContactForm() {
     })
     setIsSubmitting(false)
 
-    // In a real application, you would send the form data to your backend
     console.log("Form submitted:", formData)
   }
 
+  const data = [
+    {
+      title: "Email",
+      text: "diogosoarespeixoto41@gmail.com",
+      icon: Email
+    },
+    {
+      title: "Whatsapp",
+      text: "(38)9 9997-7397",
+      icon: Whats
+    },
+    {
+      title: "Linkedin",
+      text: "Diogo Peixoto",
+      icon: Linkedin
+    },
+  ]
+
   return (
-    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Get In Touch</h2>
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Have a project in mind or want to discuss a potential collaboration? I'd love to hear from you!
-            </p>
-          </div>
+    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 flex flex-col items-center gap-16">
+      <HeaderSection title="Contact" subtitle="Contact forms" />
+
+      <div className=" grid grid-cols-1 justify-between gap-10 lg:gap-20 md:grid-cols-2">
+        <div className="flex flex-col gap-6 items-center">
+          <h4 className="text-xl mb-2 sm:text-2xl">Fale comigo</h4>
+          <ul className="flex flex-col gap-4 w-[300px] md:w-[250px] lg:w-[300px] ">
+            {
+              data.map((item, index) => (
+                <li className="h-[150px] flex flex-col items-center gap-1 p-4 rounded-xl bg-white border border-black/10 text-xs sm:text-sm">
+                  <Image src={item.icon} alt={item.title} className="w-8 h-8" />
+                  <p className="">{item.title}</p>
+                  <p className="text-[#757575] inline md:hidden lg:inline">{item.text}</p>
+                  <Link className="flex items-center text-[#757575]" href={""}>
+                    <p>Acessar</p>
+                    <Image src={Arrow} alt="arrow" />
+                  </Link>
+                </li>
+              ))
+            }
+            
+          </ul>
         </div>
-        <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-2">
-          <Card>
-            <CardHeader>
-              <CardTitle>Contact Information</CardTitle>
-              <CardDescription>Feel free to reach out through any of these channels</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Mail className="h-5 w-5" />
-                </div>
-                <div>
-                  <h3 className="font-medium">Email</h3>
-                  <p className="text-sm text-muted-foreground">hello@example.com</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Phone className="h-5 w-5" />
-                </div>
-                <div>
-                  <h3 className="font-medium">Phone</h3>
-                  <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <MapPin className="h-5 w-5" />
-                </div>
-                <div>
-                  <h3 className="font-medium">Location</h3>
-                  <p className="text-sm text-muted-foreground">San Francisco, CA</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Send a Message</CardTitle>
-              <CardDescription>Fill out the form below and I'll get back to you as soon as possible</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid gap-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    placeholder="Your name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="grid gap-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="Your email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="grid gap-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    placeholder="Subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="grid gap-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="Your message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="min-h-[120px]"
-                    required
-                  />
-                </div>
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+
+        <div className="flex flex-col gap-6 items-center">
+          <h4 className="text-xl mb-2 sm:text-2xl">Escreva uma mensagem</h4>
+
+          <form className="flex-1 flex flex-col gap-5 justify-between w-full lg:w-[360px]">
+            <div className="border border-black/30 rounded-xl relative">
+              <Label className="text-sm text-[#757575] bg-[#FAFAFA] absolute top-[-11px] left-4 px-1" htmlFor="name">
+                Name
+              </Label>
+              <Input
+                id="name"
+                name="name"
+                type="Name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="bg-transparent border-none h-12 pl-4 sm:h-16 sm:pl-6"
+              />
+            </div>
+
+            <div className="border border-black/30 rounded-xl relative">
+              <Label className="text-sm text-[#757575] bg-[#FAFAFA] absolute top-[-11px] left-4 px-1" htmlFor="email">
+                Email
+              </Label>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Your email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="bg-transparent border-none h-12 pl-4 sm:h-16 sm:pl-6"
+              />
+            </div>
+
+            <div className="border border-black/30 rounded-xl relative">
+              <Label className="text-sm text-[#757575] bg-[#FAFAFA] absolute top-[-11px] left-4 px-1" htmlFor="email">
+                Message
+              </Label>
+              <Textarea
+                id="message"
+                name="message"
+                placeholder="Your message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="bg-transparent border-none resize-none pl-4 pt-4 sm:h-16 sm:pl-6"
+              />
+            </div>
+              <Button className="h-12 sm:h-[60px] sm:w-60 bg-[#333333] rounded-2xl text-sm sm:text-base">
+                Enviar mensagem
+                <Image src={ArrowSend} alt="" width={24} height={24} />
+              </Button>
+          </form>
         </div>
       </div>
     </section>
