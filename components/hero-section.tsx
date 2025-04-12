@@ -10,8 +10,8 @@ import { Button } from "./ui/button"
 
 export function HeroSection() {
   return (
-    <section id="home" className="w-dvw h-[calc(100dvh-64px)] relative px-2">
-      <div className="h-full flex items-center justify-center gap-12 md:gap-32">
+    <section id="home" className="w-full h-[calc(100dvh-64px)] relative">
+      <div className="h-full flex items-center justify-center gap-12 md:gap-32 pl-2">
         <div className="display flex flex-col justify-center gap-6 min-w-5">
           <a className="inline-block" href="https://www.linkedin.com/in/diogo-soares-peixoto/" target="_blank">
             <Image src={Linkedin} alt="" width={20} height={20}  />
@@ -45,7 +45,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-0  mb-4 animate-bounce w-full flex justify-center">
+      <div className="absolute bottom-0  mb-4 animate-bounce w-full flex justify-center pr-2">
         <div className="flex items-center gap-1">
           <Image className="w-6 h-6 sm:w-8 sm:h-8" src={Mouse} alt="" width={32} height={32}  />
           <p className="text-sm sm:text-base">Rolar para baixo</p>
