@@ -5,32 +5,61 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { HeaderSection } from "./header-section"
+import UxdocLogoImage from "../assets/uxdoc-logo.svg"
+import UxdocSignLogoImage from "../assets/uxdoc-sign-logo.svg"
+import ItatiaiaLogoImage from "../assets/itatiaia-logo.png"
+import SevnLogoImage from "../assets/sevn-logo.svg"
+import LooviLogo from "../assets/loovi-logo.svg"
 
 export function ProjectsSection() {
   const projects = [
     {
-      title: "Loovi",
-      description: "Car insurance company, responsible for the front-end and mobile app.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "React Native", "JavaScript", "Styled-Components"],
-      liveUrl: "#",
+      title: "Loovi - Mobile",
+      description: "Cross-platform for car insurance management.",
+      image: LooviLogo,
+      tags: ["React Native", "CLI", "JavaScript", "Android", "iOS"],
+      liveUrl: "https://play.google.com/store/apps/details?id=com.looviapp",
+      githubUrl: "#",
+    },
+    {
+      title: "Loovi - Área Logada",
+      description: "Web application for car insurance management.",
+      image: LooviLogo,
+      tags: ["React","JavaScript", "Styled-Components", "Payment"],
+      liveUrl: "https://arealogada.loovi.com.br/",
+      githubUrl: "#",
+    },
+    {
+      title: "Sevn",
+      description: "Web application for car insurance management.",
+      image: SevnLogoImage,
+      tags: ["Svelte","Typescript", "Tailwind", "Bun", "Elysia"],
+      liveUrl: "",
+      githubUrl: "#",
+    },
+    {
+      title: "Rádio Itadiaia",
+      description: "Web application for news management and radio distribution.",
+      image: ItatiaiaLogoImage,
+      tags: ["React","JavaScript", "Styled-Components", "Payment"],
+      liveUrl: "https://arealogada.loovi.com.br/",
       githubUrl: "#",
     },
     {
       title: "Ux Doc",
-      description: "A productivity application for teams to manage projects and track progress.",
-      image: "/placeholder.svg?height=400&width=600",
+      description: "Web application for visual creation of legal documents.",
+      image: UxdocLogoImage,
       tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-      liveUrl: "#",
+      liveUrl: "https://app.uxdoc.com.br/",
       githubUrl: "#",
     },
     {
       title: "Ux Doc Sign",
-      description: "Real-time weather information with interactive maps and forecasts.",
-      image: "/placeholder.svg?height=400&width=600",
+      description: "Web application for online subscription management.",
+      image: UxdocSignLogoImage,
       tags: ["Vue.js", "Express", "OpenWeather API", "D3.js"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "",
+      githubUrl: "",
     },
 
   ]
@@ -40,7 +69,7 @@ export function ProjectsSection() {
       <div className="px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <HeaderSection 
-            title="My Projects"
+            title="Projects Worked"
             subtitle="Explore the projects I’ve worked on" 
           />
         </div>
@@ -70,17 +99,16 @@ export function ProjectsSection() {
               </CardContent>
               <CardFooter className="flex justify-between">
                 <Button asChild variant="ghost" size="sm">
-                  <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    Code
+                  <Link className="underline" href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    Details
                   </Link>
                 </Button>
-                <Button asChild size="sm">
+                {project.liveUrl && <Button asChild size="sm">
                   <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Live Demo
                   </Link>
-                </Button>
+                </Button>}
               </CardFooter>
             </Card>
           ))}
