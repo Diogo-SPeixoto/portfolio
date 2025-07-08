@@ -79,7 +79,7 @@ export function ContactForm() {
           <ul className="flex flex-col gap-4 w-[300px] md:w-[250px] lg:w-[300px] ">
             {
               data.map((item, index) => (
-                <li className="h-[150px] flex flex-col items-center gap-1 p-4 rounded-xl bg-white border border-black/10 text-xs sm:text-sm">
+                <li key={item.title} className="h-[150px] flex flex-col items-center gap-1 p-4 rounded-xl bg-white border border-black/10 text-xs sm:text-sm">
                   <Image src={item.icon} alt={item.title} className="w-8 h-8" />
                   <p className="">{item.title}</p>
                   <p className="text-[#757575] inline md:hidden lg:inline">{item.text}</p>

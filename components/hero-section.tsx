@@ -6,9 +6,10 @@ import Arrow from "@/assets/arrow-icon.svg"
 import Mouse from "@/assets/mouse-icon.svg"
 import ArrowDow from "@/assets/arrow-dow-icon.svg"
 import Image from "next/image"
-import { Button } from "./ui/button"
 
 export function HeroSection() {
+  
+
   return (
     <section id="home" className="w-full h-[calc(100dvh-64px)] relative">
       <div className="h-full flex items-center justify-center gap-12 md:gap-32 pl-2">
@@ -17,7 +18,7 @@ export function HeroSection() {
             <Image src={Linkedin} alt="" width={20} height={20}  />
           </a>
 
-          <a className="inline-block" href="https://github.com/Diogo-Peixoto" target="_blank">
+          <a className="inline-block" href="https://github.com/Diogo-SPeixoto" target="_blank">
             <Image src={Github} alt="" width={20} height={20}  />
           </a>
           
@@ -35,22 +36,24 @@ export function HeroSection() {
               <span className="flex h-[1px] w-16 bg-[#757575]" />
               Front-end Develop
             </p>
-            <p className="text-sm sm:text-base text-[#757575]">I am a front-end developer with knowledge in back-end.</p>
+            <p className="text-sm sm:text-base text-[#757575]">
+              Front-end developer specialist.
+            </p>
           </div>
 
-          <Button className="h-12 w-40 sm:h-14 sm:w-44 bg-[#333333] rounded-2xl mt-12 text-sm sm:text-base">
-            Contactar
+          <Link href="#contact" className="h-12 w-40 sm:h-14 sm:w-44 bg-[#333333] text-white rounded-2xl mt-12 text-sm sm:text-base flex items-center justify-center">
+            To contact
             <Image src={Arrow} alt="" width={24} height={24} className="ml-2" />
-          </Button>
+          </Link>
         </div>
       </div>
 
       <div className="absolute bottom-0  mb-4 animate-bounce w-full flex justify-center pr-2">
-        <div className="flex items-center gap-1">
+        <Link href="#about" className="flex items-center gap-1">
           <Image className="w-6 h-6 sm:w-8 sm:h-8" src={Mouse} alt="" width={32} height={32}  />
-          <p className="text-sm sm:text-base">Rolar para baixo</p>
+          <p className="text-sm sm:text-base">Scroll down</p>
           <Image src={ArrowDow} alt="" width={16} height={16}  />
-        </div>
+        </Link>
       </div>
     </section>
   )

@@ -9,15 +9,15 @@ import { HeaderSection } from "./header-section"
 export function ProjectsSection() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-featured online store with payment processing and inventory management.",
+      title: "Loovi",
+      description: "Car insurance company, responsible for the front-end and mobile app.",
       image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      tags: ["React", "React Native", "JavaScript", "Styled-Components"],
       liveUrl: "#",
       githubUrl: "#",
     },
     {
-      title: "Task Management",
+      title: "Ux Doc",
       description: "A productivity application for teams to manage projects and track progress.",
       image: "/placeholder.svg?height=400&width=600",
       tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
@@ -25,7 +25,7 @@ export function ProjectsSection() {
       githubUrl: "#",
     },
     {
-      title: "Weather Dashboard",
+      title: "Ux Doc Sign",
       description: "Real-time weather information with interactive maps and forecasts.",
       image: "/placeholder.svg?height=400&width=600",
       tags: ["Vue.js", "Express", "OpenWeather API", "D3.js"],
@@ -41,7 +41,7 @@ export function ProjectsSection() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <HeaderSection 
             title="My Projects"
-            subtitle="Explore recent works" 
+            subtitle="Explore the projects I’ve worked on" 
           />
         </div>
         <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">

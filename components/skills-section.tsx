@@ -14,10 +14,15 @@ export function SkillsSection() {
       skills: [
         { name: "React" },
         { name: "Tailwind" },
-        { name: "JavaScript" },
         { name: "Next.js" },
-        { name: "Css" },
+        { name: "Svelte" },
         { name: "Tailwind" },
+        { name: "Typescript" },
+        { name: "JavaScript" },
+        { name: "Css" },
+        { name: "Html" },
+        { name: "SEO" },
+        { name: "Performance" },
       ],
     },
     {
@@ -25,12 +30,11 @@ export function SkillsSection() {
       name: "Backend",
       icon: <Server className="h-5 w-5" />,
       skills: [
-        { name: "Node.js", proficiency: 80 },
-        { name: "Express", proficiency: 75 },
-        { name: "Python", proficiency: 70 },
-        { name: "Django", proficiency: 65 },
-        { name: "GraphQL", proficiency: 60 },
-        { name: "REST API", proficiency: 85 },
+        { name: "Node.js"},
+        { name: "Bun"},
+        { name: "Elysia"},
+        { name: "Express"},
+        { name: "REST API"},
       ],
     },
     {
@@ -38,11 +42,10 @@ export function SkillsSection() {
       name: "Database",
       icon: <Database className="h-5 w-5" />,
       skills: [
-        { name: "MongoDB", proficiency: 80 },
-        { name: "PostgreSQL", proficiency: 75 },
-        { name: "MySQL", proficiency: 70 },
-        { name: "Firebase", proficiency: 65 },
-        { name: "Redis", proficiency: 60 },
+        { name: "MongoDB"},
+        { name: "PostgreSQL"},
+        { name: "MySQL"},
+        { name: "Redis"},
       ],
     },
     {
@@ -50,11 +53,10 @@ export function SkillsSection() {
       name: "Other",
       icon: <Settings className="h-5 w-5" />,
       skills: [
-        { name: "Git", proficiency: 85 },
-        { name: "Docker", proficiency: 70 },
-        { name: "AWS", proficiency: 65 },
-        { name: "CI/CD", proficiency: 75 },
-        { name: "Testing", proficiency: 70 },
+        { name: "Git"},
+        { name: "Docker"},
+        { name: "AWS"},
+        { name: "Testing"},
       ],
     },
   ]
@@ -76,10 +78,10 @@ export function SkillsSection() {
               ))}
             </TabsList>
             {skillCategories.map((category) => (
-              <TabsContent key={category.id} value={category.id} className="mt-6">
+              <TabsContent key={category.id} value={category.id} className="mt-6 sm:min-h-[170px]">
                 <Card>
                   <CardContent className="p-6">
-                    <div className="grid gap-6 sm:grid-cols-2">
+                    <div className="grid gap-6 sm:grid-cols-4">
                       {category.skills.map((skill, index) => (
                         <div key={index} className="space-y-2">
                           <div className="flex items-center gap-2">

@@ -6,7 +6,7 @@ import { HeaderSection } from "./header-section"
 
 export function AboutSection() {
   return (
-    <section id="about" className="w-full py-48 bg-muted/50 flex flex-col gap-16 px-4">
+    <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 flex flex-col gap-16 px-4">
       <HeaderSection title="About Me" subtitle="Introduction" />
 
       <div className="flex items-center justify-center flex-col sm:flex-row gap-9 md:gap-16">
@@ -16,19 +16,20 @@ export function AboutSection() {
           <div>
             <h4 className="font-semibold  text-xl mb-2 sm:text-2xl">Who am I?</h4>
             <p className="text-[#757575] text-xs sm:text-sm">
-              I'm a software developer with over 3 years of experience
-              specializing in building exceptional digital experiences. I focus on
-              creating clean, efficient, and user-friendly applications that solve
-              real-world problems.
+              I’m a software developer with over 3 years of experience, 
+              specializing in building exceptional front-ends. My focus 
+              is on creating efficient, clean, high-performance, and 
+              accessible applications.
             </p>
           </div>
           <div>
             <h4 className="font-semibold  text-xl mb-2 sm:text-2xl">My Journey</h4>
             <p className="text-[#757575] text-xs sm:text-sm">
-              My passion for programming started when I was in college. Since
-              then, I've worked with various technologies and frameworks,
-              constantly learning and improving my skills to stay at the
-              forefront of web development.
+              I started as a self-taught programmer, studying for about 2 years 
+              through courses, videos, and online documentation. Since then, 
+              I’ve worked with various technologies and frameworks, focusing on 
+              React and TypeScript, constantly learning and improving my skills 
+              to stay at the forefront of web development.
             </p>
           </div>
 
@@ -41,8 +42,8 @@ export function AboutSection() {
 
             <div className="w-36 py-3 border rounded-xl flex flex-col items-center gap-1 sm:gap-2 sm:w-40 sm:py-4">
               <Image src={Briefcase} alt="experience" />
-              <p className="text-sm">Projetos</p>
-              <span className="text-[10px] text-[#757575]">6+ Completed</span>
+              <p className="text-sm">Projects</p>
+              <span className="text-[10px] text-[#757575]">+6 Completed</span>
             </div>
           </div>
         </div>

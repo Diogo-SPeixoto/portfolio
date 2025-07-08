@@ -25,7 +25,7 @@ export function ExperienceSection() {
   ];
 
   return (
-    <section id="about" className="w-full py-48 bg-muted/50 flex flex-col gap-16 px-4 items-center">
+    <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 flex flex-col gap-16 px-4 items-center">
       <HeaderSection title="Experience" subtitle="Companies I have worked for" />
 
       <div className="max-w-lg flex flex-col gap-8 justify-center">
@@ -38,7 +38,7 @@ export function ExperienceSection() {
             {
               experiences.map((experience, index) => (
                 index  % 2 === 0 ? (
-                  <li className="grid grid-cols-[1fr_80px_1fr] sm:grid-cols-3">
+                  <li key={experience.title} className="grid grid-cols-[1fr_80px_1fr] sm:grid-cols-3">
                     <div className="flex flex-col gap-4">
                       <p className="text-[#333333] text-sm sm:text-base">{experience.title}</p>
                       <p className="text-xs sm:text-sm text-[#757575]">{experience.company}</p>
@@ -53,7 +53,7 @@ export function ExperienceSection() {
                     </div>
                   </li>
                 ):(
-                  <li className="grid grid-cols-[1fr_80px_1fr] sm:grid-cols-3">
+                  <li key={experience.title} className="grid grid-cols-[1fr_80px_1fr] sm:grid-cols-3">
                     <div />
                     <div className="flex flex-col items-center" >
                       <div className="w-3 h-3 rounded-full bg-[#757575]" />
