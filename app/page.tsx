@@ -2,7 +2,7 @@
 import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
 import { HeroSection } from "@/components/hero-section"
-import { ProjectsSection } from "@/components/projects-section"
+import { ProjectsSection } from "@/components/ProjectSection"
 import { ServicesSection } from "@/components/services-section"
 import { SkillsSection } from "@/components/skills-section"
 import { AboutSection } from "@/components/about-section"
