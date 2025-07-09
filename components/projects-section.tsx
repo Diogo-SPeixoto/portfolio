@@ -6,10 +6,11 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge"
 import { HeaderSection } from "./header-section"
 import { projectsResume } from "@/data"
+import FadeInWhenVisible from "./fadeIn-when-visible"
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
+    <FadeInWhenVisible id="projects" className="w-full py-12 md:py-24 lg:py-32">
       <div className="px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <HeaderSection 
@@ -63,6 +64,6 @@ export function ProjectsSection() {
           </Button>
         </div>
       </div>
-    </section>
+    </FadeInWhenVisible>
   )
 }

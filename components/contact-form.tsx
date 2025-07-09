@@ -16,6 +16,7 @@ import Linkedin from "@/assets/linkedin-icon.svg"
 import Arrow from "@/assets/arrow-right.svg"
 import ArrowSend from "@/assets/arrow-icon.svg"
 import Link from "next/link"
+import FadeInWhenVisible from "./fadeIn-when-visible"
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -47,8 +48,6 @@ export function ContactForm() {
       message: "",
     })
     setIsSubmitting(false)
-
-    console.log("Form submitted:", formData)
   }
 
   const data = [
@@ -70,7 +69,7 @@ export function ContactForm() {
   ]
 
   return (
-    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 flex flex-col items-center gap-16">
+    <FadeInWhenVisible id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 flex flex-col items-center gap-16">
       <HeaderSection title="Contact" subtitle="Contact forms" />
 
       <div className=" grid grid-cols-1 justify-between gap-10 lg:gap-20 md:grid-cols-2">
@@ -151,6 +150,6 @@ export function ContactForm() {
           </form>
         </div>
       </div>
-    </section>
+    </FadeInWhenVisible>
   )
 }

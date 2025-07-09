@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Code, Layout, Smartphone, Zap } from "lucide-react"
 import { HeaderSection } from "./header-section"
+import FadeInWhenVisible from "./fadeIn-when-visible"
 
 export function ServicesSection() {
   const services = [
@@ -30,7 +31,7 @@ export function ServicesSection() {
   ]
 
   return (
-    <section id="services" className="w-full py-12 md:py-24 lg:py-32">
+    <FadeInWhenVisible id="services" className="w-full py-12 md:py-24 lg:py-32">
       <div className="px-4 md:px-6">
           <HeaderSection title="My Services" subtitle="Professional services I offer to help businesses and individuals achieve their goals" />
         <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-4">
@@ -47,6 +48,6 @@ export function ServicesSection() {
           ))}
         </div>
       </div>
-    </section>
+    </FadeInWhenVisible>
   )
 }

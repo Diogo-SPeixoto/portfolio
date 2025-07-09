@@ -4,6 +4,7 @@ import { Database, Layout, Server, Settings } from "lucide-react"
 import { HeaderSection } from "./header-section"
 import Check from "@/assets/check-icon.svg"
 import Image from "next/image"
+import FadeInWhenVisible from "./fadeIn-when-visible"
 
 export function SkillsSection() {
   const skillCategories = [
@@ -62,7 +63,7 @@ export function SkillsSection() {
   ]
 
   return (
-    <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
+    <FadeInWhenVisible id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
       <div className="px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <HeaderSection title="My Skills" subtitle="Technologies and tools I work with to bring ideas to life" />
@@ -98,6 +99,6 @@ export function SkillsSection() {
           </Tabs>
         </div>
       </div>
-    </section>
+    </FadeInWhenVisible>
   )
 }

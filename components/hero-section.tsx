@@ -6,12 +6,13 @@ import Arrow from "@/assets/arrow-icon.svg"
 import Mouse from "@/assets/mouse-icon.svg"
 import ArrowDow from "@/assets/arrow-dow-icon.svg"
 import Image from "next/image"
+import FadeInWhenVisible from "./fadeIn-when-visible"
 
 export function HeroSection() {
   
 
   return (
-    <section id="home" className="w-full h-[calc(100dvh-64px)] relative">
+    <FadeInWhenVisible id="home" className="w-full h-[calc(100dvh-64px)] relative">
       <div className="h-full flex items-center justify-center gap-12 md:gap-32 pl-2">
         <div className="display flex flex-col justify-center gap-6 min-w-5">
           <a className="inline-block" href="https://www.linkedin.com/in/diogo-soares-peixoto/" target="_blank">
@@ -55,6 +56,6 @@ export function HeroSection() {
           <Image src={ArrowDow} alt="" width={16} height={16}  />
         </Link>
       </div>
-    </section>
+    </FadeInWhenVisible>
   )
 }

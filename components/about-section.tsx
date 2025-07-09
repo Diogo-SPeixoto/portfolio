@@ -3,10 +3,11 @@ import DiogoIlustration from "@/assets/diogo-ilustration.png"
 import Medal from "@/assets/medal-icon.svg"
 import  Briefcase from "@/assets/briefcase-icon.svg"
 import { HeaderSection } from "./header-section"
+import FadeInWhenVisible from "./fadeIn-when-visible"
 
 export function AboutSection() {
   return (
-    <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 flex flex-col gap-16 px-4">
+    <FadeInWhenVisible id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 flex flex-col gap-16 px-4">
       <HeaderSection title="About Me" subtitle="Introduction" />
 
       <div className="flex items-center justify-center flex-col sm:flex-row gap-9 md:gap-16">
@@ -48,6 +49,6 @@ export function AboutSection() {
           </div>
         </div>
       </div>
-    </section>
+    </FadeInWhenVisible>
   )
 }

@@ -4,6 +4,7 @@ import Briefcase from "@/assets/briefcase-2-icon.svg"
 import Calender from "@/assets/calender-icon.svg"
 import Image from "next/image";
 import { title } from "process";
+import FadeInWhenVisible from "./fadeIn-when-visible";
 
 export function ExperienceSection() {
   const experiences = [
@@ -25,7 +26,7 @@ export function ExperienceSection() {
   ];
 
   return (
-    <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 flex flex-col gap-16 px-4 items-center">
+    <FadeInWhenVisible id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 flex flex-col gap-16 px-4 items-center">
       <HeaderSection title="Experience" subtitle="Companies I have worked for" />
 
       <div className="max-w-lg flex flex-col gap-8 justify-center">
@@ -73,6 +74,6 @@ export function ExperienceSection() {
             }
           </ul>
       </div>
-    </section>
+    </FadeInWhenVisible>
   )
 }
