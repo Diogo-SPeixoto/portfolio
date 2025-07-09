@@ -74,7 +74,7 @@ export function ContactForm() {
 
       <div className=" grid grid-cols-1 justify-between gap-10 lg:gap-20 md:grid-cols-2">
         <div className="flex flex-col gap-6 items-center">
-          <h4 className="text-xl mb-2 sm:text-2xl">Fale comigo</h4>
+          <h4 className="text-xl mb-2 sm:text-2xl">Talk to me</h4>
           <ul className="flex flex-col gap-4 w-[300px] md:w-[250px] lg:w-[300px] ">
             {
               data.map((item, index) => (
@@ -83,7 +83,7 @@ export function ContactForm() {
                   <p className="">{item.title}</p>
                   <p className="text-[#757575] inline md:hidden lg:inline">{item.text}</p>
                   <Link className="flex items-center text-[#757575]" href={""}>
-                    <p>Acessar</p>
+                    <p>Access</p>
                     <Image src={Arrow} alt="arrow" />
                   </Link>
                 </li>
@@ -94,7 +94,7 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-6 items-center">
-          <h4 className="text-xl mb-2 sm:text-2xl">Escreva uma mensagem</h4>
+          <h4 className="text-xl mb-2 sm:text-2xl">Write a message</h4>
 
           <form className="flex-1 flex flex-col gap-5 justify-between w-full lg:w-[360px]">
             <div className="border border-black/30 rounded-xl relative">
@@ -144,7 +144,7 @@ export function ContactForm() {
               />
             </div>
               <Button className="h-12 sm:h-[60px] sm:w-60 bg-[#333333] rounded-2xl text-sm sm:text-base">
-                Enviar mensagem
+                Send message
                 <Image src={ArrowSend} alt="" width={24} height={24} />
               </Button>
           </form>
