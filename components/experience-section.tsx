@@ -8,7 +8,7 @@ import { title } from "process";
 export function ExperienceSection() {
   const experiences = [
     {
-      title: "Dev Full-Stack",
+      title: "Dev Front-end / Mobile",
       company: "SEVN Technologies",
       date: "06/23 - Present",
     },
