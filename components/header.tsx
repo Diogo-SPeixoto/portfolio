@@ -40,7 +40,7 @@ export function Header() {
             {isMenuOpen && (
               <div className="absolute top-16 left-0 right-0 bg-background border-b z-50">
                 <nav className="container py-4">
-                  <ul className="flex flex-col space-y-4">
+                  <ul className="flex flex-col space-y-4 px-4">
                     {navItems.map((item) => (
                       <li key={item.name}>
                         <Link

@@ -3,15 +3,16 @@ import './globals.css'
 import { Poppins } from 'next/font/google'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Portfolio - Diogo',
+  description: 'Portfolio - Diogo',
+  generator: 'Portfolio - Diogo',
+  icons:"../public/favicon.ico",
 }
 
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '700'], // você escolhe os pesos
+  weight: ['400', '700'],
   variable: '--font-poppins',
 })
 
