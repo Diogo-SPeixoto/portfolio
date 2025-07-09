@@ -1,7 +1,7 @@
 import Image from "next/image"
-import DiogoIlustration from "@/assets/diogo-ilustration.png"
-import Medal from "@/assets/medal-icon.svg"
-import  Briefcase from "@/assets/briefcase-icon.svg"
+import DiogoIlustration from "@/assets/images/diogo-ilustration.png"
+import Medal from "@/assets/icons/medal-icon.svg"
+import  Briefcase from "@/assets/icons/briefcase-icon.svg"
 import { HeaderSection } from "./header-section"
 import FadeInWhenVisible from "./fadeIn-when-visible"
 

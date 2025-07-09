@@ -1,11 +1,10 @@
 import Image from "next/image"
 import { DialogContent, DialogTitle } from "../ui/dialog"
-import Image1 from "@/assets/loovi-1.png"
-import Image2 from "@/assets/loovi-2.png"
-import Image3 from "@/assets/loovi-3.png"
-import Image4 from "@/assets/loovi-4.png"
-import Image5 from "@/assets/loovi-5.png"
-import { Badge } from "../ui/badge"
+import Image1 from "@/assets/images/loovi-1.png"
+import Image2 from "@/assets/images/loovi-2.png"
+import Image3 from "@/assets/images/loovi-3.png"
+import Image4 from "@/assets/images/loovi-4.png"
+import Image5 from "@/assets/images/loovi-5.png"
 
 export const ProjectModal = ()=>{
     return(

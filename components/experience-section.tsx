@@ -1,7 +1,7 @@
 "use client"
 import { HeaderSection } from "./header-section";
-import Briefcase from "@/assets/briefcase-2-icon.svg"
-import Calender from "@/assets/calender-icon.svg"
+import Briefcase from "@/assets/icons/briefcase-2-icon.svg"
+import Calender from "@/assets/icons/calender-icon.svg"
 import Image from "next/image";
 import { title } from "process";
 import FadeInWhenVisible from "./fadeIn-when-visible";

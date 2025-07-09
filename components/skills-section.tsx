@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Database, Layout, Server, Settings } from "lucide-react"
 import { HeaderSection } from "./header-section"
-import Check from "@/assets/check-icon.svg"
+import Check from "@/assets/icons/check-icon.svg"
 import Image from "next/image"
 import FadeInWhenVisible from "./fadeIn-when-visible"
 

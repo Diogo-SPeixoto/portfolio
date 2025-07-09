@@ -1,12 +1,12 @@
-import UxdocLogoImage from "../assets/uxdoc-logo.svg"
-import UxdocSignLogoImage from "../assets/uxdoc-sign-logo.svg"
-import ItatiaiaLogoImage from "../assets/itatiaia-logo.png"
-import SevnLogoImage from "../assets/sevn-logo.svg"
-import LooviLogo from "../assets/loovi-logo.svg"
+import UxdocLogoImage from "../assets/logos/uxdoc-logo.svg"
+import UxdocSignLogoImage from "../assets/logos/uxdoc-sign-logo.svg"
+import ItatiaiaLogoImage from "../assets/logos/itatiaia-logo.png"
+import SevnLogoImage from "../assets/logos/sevn-logo.svg"
+import LooviLogo from "../assets/logos/loovi-logo.svg"
 
 export const projectsResume = [
   {
-    title: "Loovi - Mobile",
+    title: "Loovi",
     description: "Cross-platform for car insurance management.",
     image: LooviLogo,
     tags: ["React Native", "CLI", "JavaScript", "Android", "iOS"],
