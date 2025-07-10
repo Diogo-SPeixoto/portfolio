@@ -1,5 +1,5 @@
 import { HeaderSection } from "../header-section"
-import { projectsResume } from "@/data"
+import { projects } from "@/data"
 import FadeInWhenVisible from "../fadeIn-when-visible"
 import { ProjectCard } from "./project-card"
 
@@ -14,14 +14,17 @@ export function ProjectsSection() {
           />
         </div>
         <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
-          {projectsResume.map((project, index) => (
+          {projects.map((project, index) => (
             <ProjectCard 
               key={index}
-              image={project.image}
-              description={project.description}
-              tags={project.tags}
               title={project.title}
+              description={project.description}
+              images={project.images}
+              tags={project.tags}
               liveUrl={project.liveUrl}
+              platforms={project.platforms}
+              services={project.services}
+              aboutProject={project.aboutProject}
             />
           ))}
         </div>

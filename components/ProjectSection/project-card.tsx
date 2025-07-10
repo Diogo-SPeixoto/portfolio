@@ -4,23 +4,17 @@ import { ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog"
+import { Dialog, DialogTrigger } from "../ui/dialog"
 import { ProjectModal } from "./project-modal"
+import { IProject } from "@/types"
 
-interface ProjectCardProps {
-    image: string;
-    title: string;
-    tags: string[];
-    description: string;
-    liveUrl?: string;
-}
 
-export const ProjectCard = ({image, title, tags, description, liveUrl}: ProjectCardProps)=>{
+export const ProjectCard = ({images, aboutProject, description, liveUrl, platforms, services, tags, title}:IProject)=>{
     return (
         <Card className="overflow-hidden">
             <div className="relative aspect-video overflow-hidden">
             <Image
-                src={image || "/placeholder.svg"}
+                src={images.logo || "/placeholder.svg"}
                 alt={title}
                 fill
                 className="object-cover transition-transform hover:scale-105"
@@ -42,7 +36,13 @@ export const ProjectCard = ({image, title, tags, description, liveUrl}: ProjectC
             <CardFooter className="flex justify-between">
             <Dialog>
                 <DialogTrigger className="text-sm underline">Details</DialogTrigger>
-                <ProjectModal />
+                <ProjectModal 
+                    aboutProject={ aboutProject}
+                    ilustrations={images.ilustration}
+                    platforms={platforms}
+                    services={services}
+                    title={title}
+                />
             </Dialog>
             {liveUrl && <Button asChild size="sm">
                 <Link href={liveUrl} target="_blank" rel="noopener noreferrer">
