@@ -11,7 +11,7 @@ export function ExperienceSection() {
     {
       title: "Dev Front-end / Mobile",
       company: "SEVN Technologies",
-      date: "06/23 - Present",
+      date: "06/24 - Present",
     },
     {
       title: "Dev Front-end",
@@ -26,7 +26,7 @@ export function ExperienceSection() {
   ];
 
   return (
-    <FadeInWhenVisible id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 flex flex-col gap-16 px-4 items-center">
+    <FadeInWhenVisible id="experience" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50 flex flex-col gap-16 px-4 items-center">
       <HeaderSection title="Experience" subtitle="Companies I have worked for" />
 
       <div className="max-w-lg flex flex-col gap-8 justify-center">

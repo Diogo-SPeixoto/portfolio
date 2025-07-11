@@ -17,6 +17,7 @@ import ImageUxdoc2 from "@/assets/images/uxdoc-2.png"
 import ImageUxdoc3 from "@/assets/images/uxdoc-3.png"
 import ImageUxdoc4 from "@/assets/images/uxdoc-4.png"
 import ImageUxdoc5 from "@/assets/images/uxdoc-5.png"
+import ImageSevn1 from "@/assets/images/sevn-1.png"
 
 
 export const projects = [
@@ -27,7 +28,7 @@ export const projects = [
       logo:LooviLogo,
       ilustration:[ImageLoovi1, ImageLoovi2, ImageLoovi3, ImageLoovi4, ImageLoovi5],
     },
-    tags: ["React Native", "React", "CLI", "JavaScript", "Android", "iOS", "Styled-Components",],
+    tags: ["React Native", "React", "JavaScript","Styled-Components", "Android", "iOS",],
     liveUrl: "https://play.google.com/store/apps/details?id=com.looviapp",
     platforms: ["Android", "iOS", "Web"],
     services:[
@@ -56,9 +57,9 @@ export const projects = [
     description: "Consulting for internal software and app development.",
     images: {
       logo:SevnLogoImage,
-      ilustration:[ImageLoovi1, ImageLoovi2, ImageLoovi3, ImageLoovi4, ImageLoovi5]
+      ilustration:[ImageSevn1, ImageLoovi2,]
     },
-    tags: ["Svelte","Typescript", "Tailwind", "Bun", "Elysia", "Prisma"],
+    tags: ["Svelte","Typescript", "Tailwind", "Bun", "Elysia", "Prisma"], 
     liveUrl: "",
     platforms: ["Web"],
     services:[
@@ -108,7 +109,7 @@ export const projects = [
       ilustration:[ImageUxdoc1, ImageUxdoc2, ImageUxdoc3, ImageUxdoc4, ImageUxdoc5]
     },
     tags: ["React", "Typescript", "Javascript", "Styled-Components"],
-    liveUrl: "",
+    liveUrl: "https://app.uxdoc.com.br",
     platforms: ["Web"],
     services:[
       "Creation and implementation of new features",

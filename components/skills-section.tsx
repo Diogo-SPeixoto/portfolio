@@ -14,6 +14,7 @@ export function SkillsSection() {
       icon: <Layout className="h-5 w-5" />,
       skills: [
         { name: "React" },
+        { name: "React-Native" },
         { name: "Tailwind" },
         { name: "Next.js" },
         { name: "Svelte" },

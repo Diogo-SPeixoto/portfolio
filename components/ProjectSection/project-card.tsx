@@ -25,9 +25,9 @@ export const ProjectCard = ({images, aboutProject, description, liveUrl, platfor
             <CardDescription className="text-[#757575] text-xs sm:text-sm">{description}</CardDescription>
             </CardHeader>
             <CardContent>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 lg:min-h-[82px]">
                 {tags.map((tag, tagIndex) => (
-                <Badge key={tagIndex} variant="secondary">
+                <Badge key={tagIndex} variant="secondary" className="max-h-[22px]">
                     {tag}
                 </Badge>
                 ))}
@@ -35,7 +35,7 @@ export const ProjectCard = ({images, aboutProject, description, liveUrl, platfor
             </CardContent>
             <CardFooter className="flex justify-between">
             <Dialog>
-                <DialogTrigger className="text-sm underline">Details</DialogTrigger>
+                <DialogTrigger className="text-sm underline min-h-9">Details</DialogTrigger>
                 <ProjectModal 
                     aboutProject={ aboutProject}
                     ilustrations={images.ilustration}
